@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+        long long int n;
+        cin>>n;
+    
+        long long int cnt = 0;
+        for(long long i=0;i<2*n;i++)
+        {
+            long long x;
+            cin>>x;
+            if(i<n && x>n)
+               cnt += (n - i);
+            
+
+            else if(i>=n && x<= n)
+                  cnt += (i - n);
+            
+        }
+
+        cout << cnt << endl;
+}
+
+int main(){
+    int t=1;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
